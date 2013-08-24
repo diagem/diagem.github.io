@@ -1,0 +1,12 @@
+{
+  "name": "backbone-query-parameters",
+  "homepage": "https://github.com/jhudson8/backbone-query-parameters",
+  "_release": "dce86df5dc",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "dce86df5dce556865aa688ac36701a202b5e9a74"
+  },
+  "_source": "git://github.com/jhudson8/backbone-query-parameters.git",
+  "_target": "*"
+}

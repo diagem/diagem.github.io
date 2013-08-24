@@ -1,0 +1,50 @@
+({define:typeof define!='undefined'?define:function(deps, factory){module.exports = factory();}}).define([], function(){
+  var exports = function(__obj) {
+    if (!__obj) __obj = {};
+    var __out = [], __capture = function(callback) {
+      var out = __out, result;
+      __out = [];
+      callback.call(this);
+      result = __out.join('');
+      __out = out;
+      return __safe(result);
+    }, __sanitize = function(value) {
+      if (value && value.ecoSafe) {
+        return value;
+      } else if (typeof value !== 'undefined' && value != null) {
+        return __escape(value);
+      } else {
+        return '';
+      }
+    }, __safe, __objSafe = __obj.safe, __escape = __obj.escape;
+    __safe = __obj.safe = function(value) {
+      if (value && value.ecoSafe) {
+        return value;
+      } else {
+        if (!(typeof value !== 'undefined' && value != null)) value = '';
+        var result = new String(value);
+        result.ecoSafe = true;
+        return result;
+      }
+    };
+    if (!__escape) {
+      __escape = __obj.escape = function(value) {
+        return ('' + value)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      };
+    }
+    (function() {
+      (function() {
+        __out.push('<div class="present present_service">\n  <div class="present-slider-block">\n    <a href="/training/" class="present-slider_arrow present-slider_arrow-prev"></a>\n    <a href="/" class="present-slider_arrow present-slider_arrow-next"></a>\n    <div class="present-slider present-slider_service">\n      <div class="present-section present-section_service">\n        <div class="present-section-1">\n          <h1 class="present-section__title"><b>Эксклюзивные камни ручной огранки</b><br> любых форм и размеров</h1>\n          <img src="/static/i/line_shdw_1.png" height="11" width="585" alt="" class="present-section__sep">\n          <p class="present-section__text">Делаем огранку камней на собственном ограночном участке. Такие камни отличаются совершенством огранки и великолепным блеском. Из поделочных камней мы изготавливаем кабошоны.</p>\n          <a href="#" class="btn-uni__link btn-uni__link_light-blue">\n            <div class="btn-uni__link-body">\n              <img src="/static/i/btn-uni__blue-light_angle_left.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n              <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n              <span class="btn-uni__link-text btn-uni__link-text_light-blue">Посмотреть в каталоге</span>\n              <img src="/static/i/btn-uni__blue-light_angle_right.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n              <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n            </div>\n            <img src="/static/i/btn-uni__blue-light_shadow.png" height="9" width="194" alt="" class="btn-uni__link-shadow">\n          </a>\n        </div>\n        <div class="present-section-2">\n          <img src="/static/i/content/kamen.png" height="590" width="561" alt="" class="present-section__pic-clear">\n        </div>\n        <div class="present-section-1 present-section_hidden">\n          <h1 class="present-section__title"><b>Эксклюзивные камни ручной огранки</b><br> любых форм и размеров</h1>\n          <img src="/static/i/line_shdw_1.png" height="11" width="585" alt="" class="present-section__sep">\n          <p class="present-section__text">Делаем огранку камней на собственном ограночном участке. Такие камни отличаются совершенством огранки и великолепным блеском. Из поделочных камней мы изготавливаем кабошоны.</p>\n          <a href="#" class="btn-uni__link btn-uni__link_light-blue">\n            <div class="btn-uni__link-body">\n              <img src="/static/i/btn-uni__blue-light_angle_left.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n              <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n              <span class="btn-uni__link-text btn-uni__link-text_light-blue">Посмотреть в каталоге</span>\n              <img src="/static/i/btn-uni__blue-light_angle_right.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n              <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n            </div>\n            <img src="/static/i/btn-uni__blue-light_shadow.png" height="9" width="194" alt="" class="btn-uni__link-shadow">\n          </a>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="present-section-block present-section-block_service">\n    <div class="present-section">\n      <div class="present-section-1">\n        <img src="/static/i/content/puzzle.png" height="416" width="581" alt="" class="present-section__pic-clear">\n      </div>\n      <div class="present-section-2">\n        <h1 class="present-section__title">Калиброванные ювелирные вставки <br><b>азиатской огранки</b></h1>\n        <img src="/static/i/line_shdw_1.png" height="11" width="585" alt="" class="present-section__sep">\n        <p class="present-section__text">Мы тщательно контролируем качество огранки камней и поставляем камни только хорошего качества и яркого цвета.</p>\n        <a href="#" class="btn-uni__link btn-uni__link_light-blue">\n          <div class="btn-uni__link-body">\n            <img src="/static/i/btn-uni__blue-light_angle_left.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n            <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n            <span class="btn-uni__link-text btn-uni__link-text_light-blue">Посмотреть в каталоге</span>\n            <img src="/static/i/btn-uni__blue-light_angle_right.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n            <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n          </div>\n          <img src="/static/i/btn-uni__blue-light_shadow.png" height="9" width="194" alt="" class="btn-uni__link-shadow">\n        </a>\n      </div>\n    </div>\n    <div class="present-section">\n      <div class="present-section-1">\n        <h1 class="present-section__title"><b>Синтетические ювелирные вставки</b></h1>\n        <img src="/static/i/line_shdw_1.png" height="11" width="585" alt="" class="present-section__sep">\n        <p class="present-section__text">Делаем огранку камней на собственном ограночном участке. Такие камни отличаются совершенством огранки и великолепным блеском. Из поделочных камней мы изготавливаем кабошоны.</p>\n        <a href="#" class="btn-uni__link btn-uni__link_light-blue">\n          <div class="btn-uni__link-body">\n            <img src="/static/i/btn-uni__blue-light_angle_left.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n            <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n            <span class="btn-uni__link-text btn-uni__link-text_light-blue">Посмотреть в каталоге</span>\n            <img src="/static/i/btn-uni__blue-light_angle_right.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n            <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n          </div>\n          <img src="/static/i/btn-uni__blue-light_shadow.png" height="9" width="194" alt="" class="btn-uni__link-shadow">\n        </a>\n      </div>\n      <div class="present-section-2">\n        <div class="present-section__pic-dummy"></div>\n        <img src="/static/i/content/hand.png" height="538" width="623" alt="" class="present-section__pic-hand">\n      </div>\n      <div class="present-section-1 present-section_hidden">\n        <h1 class="present-section__title"><b>Синтетические ювелирные вставки</b></h1>\n        <img src="/static/i/line_shdw_1.png" height="11" width="585" alt="" class="present-section__sep">\n        <p class="present-section__text">Делаем огранку камней на собственном ограночном участке. Такие камни отличаются совершенством огранки и великолепным блеском. Из поделочных камней мы изготавливаем кабошоны.</p>\n        <div class="btn-opera-bug"></div>\n        <a href="#" class="btn-uni__link btn-uni__link_light-blue">\n          <div class="btn-uni__link-body">\n            <img src="/static/i/btn-uni__blue-light_angle_left.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n            <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n            <span class="btn-uni__link-text btn-uni__link-text_light-blue">Посмотреть в каталоге</span>\n            <img src="/static/i/btn-uni__blue-light_angle_right.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n            <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n          </div>\n          <img src="/static/i/btn-uni__blue-light_shadow.png" height="9" width="194" alt="" class="btn-uni__link-shadow">\n        </a>\n      </div>\n    </div>\n  </div>\n</div>');
+      
+      }).call(this);
+      
+    }).call(__obj);
+    __obj.safe = __objSafe, __obj.escape = __escape;
+    return __out.join('');
+  };
+  return exports;
+});

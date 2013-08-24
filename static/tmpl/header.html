@@ -1,0 +1,61 @@
+<div class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">
+      <img src="/static/i/logo.png" height="50" width="44" alt="" class="logo__pic">
+      <img src="/static/i/logo_text.png" height="28" width="132" alt="" class="logo-text">
+    </a>
+    <ul class="nav">
+      <li class="nav__list">
+        <a href="/" class="nav__link <% if @section is "inspection": %>nav__link_active<% end %>"> <!-- nav__link_active -->
+          <img src="/static/i/nav_angle_left.png" height="40" width="9" alt="" class="nav__angle-left">
+          <img src="/static/i/nav_angle_left_active.png" height="40" width="9" alt="" class="nav__angle-left_active">
+          <div class="nav__content">
+            <i class="nav__icon nav__icon-1"></i>
+            <span class="nav__text">Экспертиза и оценка</span>
+          </div>
+          <img src="/static/i/nav_angle_right.png" height="40" width="9" alt="" class="nav__angle-right">
+          <img src="/static/i/nav_angle_right_active.png" height="40" width="9" alt="" class="nav__angle-right_active">
+        </a>
+      </li><li class="nav__list">
+        <a href="/training/" class="nav__link <% if @section is "training": %>nav__link_active<% end %>"> <!-- nav__link_active -->
+          <img src="/static/i/nav_angle_left.png" height="40" width="9" alt="" class="nav__angle-left">
+          <img src="/static/i/nav_angle_left_active.png" height="40" width="9" alt="" class="nav__angle-left_active">
+          <div class="nav__content">
+            <i class="nav__icon nav__icon-2"></i>
+            <span class="nav__text">Обучение</span>
+          </div>
+          <img src="/static/i/nav_angle_right.png" height="40" width="9" alt="" class="nav__angle-right">
+          <img src="/static/i/nav_angle_right_active.png" height="40" width="9" alt="" class="nav__angle-right_active">
+        </a>
+      </li><li class="nav__list">
+        <a href="/sell/" class="nav__link <% if @section is "sell": %>nav__link_active<% end %>"> <!-- nav__link_active -->
+          <img src="/static/i/nav_angle_left.png" height="40" width="9" alt="" class="nav__angle-left">
+          <img src="/static/i/nav_angle_left_active.png" height="40" width="9" alt="" class="nav__angle-left_active">
+          <div class="nav__content">
+            <i class="nav__icon nav__icon-3"></i>
+            <span class="nav__text">Продажа камней</span>
+          </div>
+          <img src="/static/i/nav_angle_right.png" height="40" width="9" alt="" class="nav__angle-right">
+          <img src="/static/i/nav_angle_right_active.png" height="40" width="9" alt="" class="nav__angle-right_active">
+        </a>
+        <% if @section+"1" in ["catalog", "sell"]: %> remove "+1"
+          <a href="/sell/catalog/" class="nav__link nav__link_inner <% if @section in ["catalog"]: %>nav__link_inner_active<% end %>">
+            <img src="/static/i/nav_angle_left_inverse_active.png" height="40" width="9" alt="" class="nav__angle-left_active">
+            <div class="nav__content">
+              <span class="nav__text">Каталог</span>
+            </div>
+            <img src="/static/i/nav_angle_right.png" height="40" width="9" alt="" class="nav__angle-right">
+            <img src="/static/i/nav_angle_right_active.png" height="40" width="9" alt="" class="nav__angle-right_active">
+          </a>
+        <% end %> 
+      </li>
+    </ul>
+    <a target="_blank" href="https://www.facebook.com/profile.php?id=100005572535169" class="nav-more-link">
+      <span class="nav-more-link__text">Блог</span>
+    </a>
+    <div class="contact">
+      <a href="tel:+7 (343) 257-35-68" class="contact__phone">+7 (343) 257-35-68</a>
+      <a href="" class="contact__address"></a>
+    </div>
+  </div>
+</div>

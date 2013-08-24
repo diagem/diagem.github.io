@@ -85,9 +85,7 @@ define(function(require, exports, module){
         return $(".header__inner > ul.nav").html(newHtml);
       });
     };
-    prototype.initialize = function(){
-      return this.setActive();
-    };
+    prototype.initialize = function(){};
     function Meta(){
       Meta.superclass.apply(this, arguments);
     }

@@ -13,13 +13,6 @@ define(function(require, exports, module){
       "(#/)training(/)": "training",
       "(#/)sell(/)": "sell"
     };
-    prototype.goToProfile = function(){
-      var this$ = this;
-      this.navigate("#/");
-      return setTimeout(function(){
-        return this$.meta.setActive();
-      }, 0);
-    };
     prototype.main = function(){
       if (this.view != null) {
         this.meta.setActive("inspection");

@@ -34,11 +34,15 @@ require.config({
     "collections": "/static/app/collections",
     "tmpl": "/static/tmpl",
     "sockjs": "/static/libs/sockjs/sockjs.min",
-    "marked": "/static/libs/marked/lib/marked"
+    "marked": "/static/libs/marked/lib/marked",
+    "ymaps": "http://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU"
   },
   shim: {
     moment: {
       exports: "moment"
+    },
+    ymaps: {
+      exports: "ymaps"
     },
     marked: {
       exports: "marked"

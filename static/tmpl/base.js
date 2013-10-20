@@ -38,7 +38,7 @@
     }
     (function() {
       (function() {
-        __out.push('<!DOCTYPE HTML>\n<html lang="ru">\n<head>\n  <meta charset="utf-8">\n  <!-- Mimic Internet Explorer edge -->\n  <meta http-equiv="X-UA-Compatible" content="IE=edge">\n  <title>Diagem</title>\n  <meta name="description" content="">\n  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">\n  <meta name="format-detection" content="telephone=no">\n  <link rel="stylesheet" type="text/css" href="/static/css/style.min.css" media="all">\n  <!--[if lt IE 9]>\n  <link rel="stylesheet" type="text/css" media="all" href="/static/css/style_ie.min.css"/>\n  <![endif]-->\n  ');
+        __out.push('<!DOCTYPE HTML>\n<html lang="ru">\n<head>\n  <meta charset="utf-8">\n  <!-- Mimic Internet Explorer edge -->\n  <meta http-equiv="X-UA-Compatible" content="IE=edge">\n  <title>Diagem</title>\n  <meta name="description" content="">\n  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">\n  <meta name="format-detection" content="telephone=no">\n  <link rel="stylesheet" type="text/css" href="/static/css/style.min.css" media="all">\n  <link rel="stylesheet" type="text/css" href="/static/css/regular.css" media="all">\n  <!--[if lt IE 9]>\n  <link rel="stylesheet" type="text/css" media="all" href="/static/css/style_ie.min.css"/>\n  <![endif]-->\n  ');
       
         if (!!this.conf.debug) {
           __out.push('\n  <script type="text/javascript" charset="utf-8">\n    window.DEBUG = ');
@@ -46,15 +46,37 @@
           __out.push(';\n  </script>\n  ');
         }
       
-        __out.push('\n  <script data-main="/static/app/init" src="/static/libs/requirejs/require.js" type="text/javascript"></script>\n\n  <title>Диагем</title>\n  \n</head>\n<body>\n  ');
+        __out.push('\n  <script data-main="/static/app/init" src="/static/libs/requirejs/require.js" type="text/javascript"></script>\n\n  <title>Диагем</title>\n  \n</head>\n<body>\n  <span id="-body" class="');
+      
+        if (this.modal != null) {
+          __out.push('-no-scroll');
+        }
+      
+        __out.push('">\n    ');
       
         __out.push(this.header);
       
-        __out.push('\n  <span id="-view">');
+        __out.push('\n    <span id="-view">');
       
         __out.push(this.page);
       
-        __out.push('</span>\n  <div class="footer">\n    <div class="footer__inner">\n      <div class="footer-logo">\n        <img src="/static/i/logo_small.png" height="25" width="22" alt="" class="footer-logo__pic">\n        <span class="footer-logo__text">Диагем — независимая экспертиза, оценка драгоценных, ювелирных и других камней, бриллиантов и изделий из драгоценных металлов.</span>\n      </div><div class="footer-contact">\n        <a href="tel:+7 (343) 257-35-68" class="footer-contact__phone">+7 (343) 257-35-68</a>\n        <div class="footer-contact__address">Росссия, Екатеринбург, Хохрякова, 74</div>\n      </div><div class="footer-link">\n        <a href="#" class="footer-copy">&copy; ООО «Диагем»</a><br>\n        <a href="#" class="footer-made-in">made in <img src="/static/i/doit_logo.png" height="15" width="13" alt=""></a>\n      </div>\n    </div>\n  </div>\n\n</body>\n</html>\n');
+        __out.push('</span>\n    <div class="footer">\n      <div class="footer__inner">\n        <div class="footer-logo">\n          <img src="/static/i/logo_small.png" height="25" width="22" alt="" class="footer-logo__pic">\n          <span class="footer-logo__text">Диагем — независимая экспертиза, оценка драгоценных, ювелирных и других камней, бриллиантов и изделий из драгоценных металлов.</span>\n        </div><div class="footer-contact">\n          <a href="tel:+7 (343) 257-35-68" class="footer-contact__phone">+7 (343) 257-35-68</a>\n          <div class="footer-contact__address">Росссия, Екатеринбург, Хохрякова, 74</div>\n        </div><div class="footer-link">\n          <a href="/" class="footer-copy">&copy; ООО «Диагем»</a><br>\n          <a href="http://doitgroup.ru/" target="_blank" class="footer-made-in">made in <img src="/static/i/doit_logo.png" height="15" width="13" alt=""></a>\n        </div>\n      </div>\n    </div>\n\n  </span>\n\n  <div class="window-bg ');
+      
+        if (this.modal != null) {
+          __out.push('-show');
+        }
+      
+        __out.push('"></div>\n  <div class="window content__inner ');
+      
+        if (this.modal != null) {
+          __out.push('-show');
+        }
+      
+        __out.push('">\n    <a href="/" class="window-close">\n      <img src="/static/i/window_close.png" height="28" width="28" alt="" class="window-close__icon">\n    </a>\n    <span class="-modal-wrapper">');
+      
+        __out.push(this.modal);
+      
+        __out.push('</span>\n  </div>\n</body>\n</html>\n');
       
       }).call(this);
       

@@ -20,7 +20,7 @@
   
 </head>
 <body>
-  <span id="-body" class="">
+  <span id="-body" class="-no-scroll">
     <div class="header">
   <div class="header__inner">
     <a href="/" class="logo">
@@ -165,12 +165,22 @@
 
   </span>
 
-  <div class="window-bg "></div>
-  <div class="window content__inner ">
+  <div class="window-bg -show"></div>
+  <div class="window content__inner -show">
     <a href="/" class="window-close">
       <img src="/static/i/window_close.png" height="28" width="28" alt="" class="window-close__icon">
     </a>
-    <span class="-modal-wrapper"></span>
+    <span class="-modal-wrapper"><div class="content__menu-bg content__menu-bg_window"></div>
+<img src="/static/i/menu_shadow.png" height="765" width="10" alt="" class="content__menu-shadow">
+<div class="content__menu">
+  <h2 class="window-menu__title-sub">Контакты:</h2>
+    <p class="menu-desc">описание</p>
+</div>
+<div class="content__body">
+  <div class="-map-wrapper" id="map"></div>
+  <!-- map -->
+</div>
+</span>
   </div>
 </body>
 </html>

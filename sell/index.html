@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" type="text/css" href="/static/css/style.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/static/css/regular.css" media="all">
   <!--[if lt IE 9]>
   <link rel="stylesheet" type="text/css" media="all" href="/static/css/style_ie.min.css"/>
   <![endif]-->
@@ -19,7 +20,8 @@
   
 </head>
 <body>
-  <div class="header">
+  <span id="-body" class="">
+    <div class="header">
   <div class="header__inner">
     <a href="/" class="logo">
       <img src="/static/i/logo.png" height="50" width="44" alt="" class="logo__pic">
@@ -67,11 +69,12 @@
     </a>
     <div class="contact">
       <a href="tel:+7 (343) 257-35-68" class="contact__phone">+7 (343) 257-35-68</a>
-      <a href="" class="contact__address"></a>
+      <a href="/map/" class="contact__address"></a>
     </div>
   </div>
 </div>
-  <span id="-view"><div class="present present_service">
+
+    <span id="-view"><div class="present present_service">
   <div class="present-slider-block">
     <a href="/training/" class="present-slider_arrow present-slider_arrow-prev"></a>
     <a href="/" class="present-slider_arrow present-slider_arrow-next"></a>
@@ -173,20 +176,29 @@
     </div>
   </div>
 </div></span>
-  <div class="footer">
-    <div class="footer__inner">
-      <div class="footer-logo">
-        <img src="/static/i/logo_small.png" height="25" width="22" alt="" class="footer-logo__pic">
-        <span class="footer-logo__text">Диагем — независимая экспертиза, оценка драгоценных, ювелирных и других камней, бриллиантов и изделий из драгоценных металлов.</span>
-      </div><div class="footer-contact">
-        <a href="tel:+7 (343) 257-35-68" class="footer-contact__phone">+7 (343) 257-35-68</a>
-        <div class="footer-contact__address">Росссия, Екатеринбург, Хохрякова, 74</div>
-      </div><div class="footer-link">
-        <a href="#" class="footer-copy">&copy; ООО «Диагем»</a><br>
-        <a href="#" class="footer-made-in">made in <img src="/static/i/doit_logo.png" height="15" width="13" alt=""></a>
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer-logo">
+          <img src="/static/i/logo_small.png" height="25" width="22" alt="" class="footer-logo__pic">
+          <span class="footer-logo__text">Диагем — независимая экспертиза, оценка драгоценных, ювелирных и других камней, бриллиантов и изделий из драгоценных металлов.</span>
+        </div><div class="footer-contact">
+          <a href="tel:+7 (343) 257-35-68" class="footer-contact__phone">+7 (343) 257-35-68</a>
+          <div class="footer-contact__address">Росссия, Екатеринбург, Хохрякова, 74</div>
+        </div><div class="footer-link">
+          <a href="/" class="footer-copy">&copy; ООО «Диагем»</a><br>
+          <a href="http://doitgroup.ru/" target="_blank" class="footer-made-in">made in <img src="/static/i/doit_logo.png" height="15" width="13" alt=""></a>
+        </div>
       </div>
     </div>
-  </div>
 
+  </span>
+
+  <div class="window-bg "></div>
+  <div class="window content__inner ">
+    <a href="/" class="window-close">
+      <img src="/static/i/window_close.png" height="28" width="28" alt="" class="window-close__icon">
+    </a>
+    <span class="-modal-wrapper"></span>
+  </div>
 </body>
 </html>

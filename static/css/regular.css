@@ -1,0 +1,65 @@
+.window-bg {
+  background-color: rgba(255,255,255,0.83);
+}
+
+.window, .window-bg {
+  display:none;
+}
+
+.-show {
+  display: block;
+}
+
+.-no-scroll {
+  // TODO
+}
+
+.-map-wrapper {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 280px;
+  right: 10px;
+  bottom: 10px;
+}
+
+.present-section-1 {
+  display: inline-block;
+}
+.present-section-1.present-section_hidden {
+  display: none;
+}
+
+/* Responsive: Mobile (Portrait) */
+/* ----------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  .present-section-1 {
+    display: none;
+  }
+  .present-section-1.present-section_hidden {
+    display: inline-block;
+  }
+}
+
+/* Responsive: Mobile (Landscape)*/
+/* ----------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .present-section-1 {
+    display: none;
+  }
+  .present-section-1.present-section_hidden {
+    display: inline-block;
+  }
+}
+
+
+/* Responsive: Tablet (Portrait)*/
+/* ----------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1022px) {
+  .present-section-1 {
+    display: inline-block;
+  }
+  .present-section-1.present-section_hidden {
+    display: none;
+  }
+}

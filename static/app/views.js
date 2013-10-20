@@ -1,6 +1,6 @@
 var this$ = this, toString$ = {}.toString;
 define(function(require, exports, module){
-  var jquery, async, backbone, utils, marked, isNumber, API, Base, Meta, Main, Training, Sell;
+  var jquery, async, backbone, utils, marked, isNumber, API, Base, ModalBase, Meta, Main, Training, Sell, Map;
   jquery = require('jquery');
   async = require('async');
   backbone = require('backbone');
@@ -69,6 +69,31 @@ define(function(require, exports, module){
     };
     return Base;
   }(Backbone.View));
+  ModalBase = (function(superclass){
+    var prototype = extend$((import$(ModalBase, superclass).displayName = 'ModalBase', ModalBase), superclass).prototype, constructor = ModalBase;
+    function ModalBase(opts){
+      opts == null && (opts = {});
+      if (opts.el == null) {
+        opts.el = $(".-modal-wrapper");
+      }
+      if (opts.prevView != null) {
+        opts.prevView.undelegateEvents();
+        opts.prevView = void 8;
+      }
+      this.query = utils.qs.parse();
+      ModalBase.superclass.apply(this, arguments);
+    }
+    prototype.render = function(){
+      $(".window-bg, .window").show();
+      if (this.query.next != null) {
+        $(".window-close").attr("href", this.query.next);
+      } else {
+        $(".window-close").attr("href", "/");
+      }
+      return superclass.prototype.render.apply(this, arguments);
+    };
+    return ModalBase;
+  }(Base));
   exports.Meta = Meta = (function(superclass){
     var prototype = extend$((import$(Meta, superclass).displayName = 'Meta', Meta), superclass).prototype, constructor = Meta;
     prototype.events = {
@@ -115,6 +140,42 @@ define(function(require, exports, module){
     }
     return Sell;
   }(Base));
+  exports.Map = Map = (function(superclass){
+    var prototype = extend$((import$(Map, superclass).displayName = 'Map', Map), superclass).prototype, constructor = Map;
+    prototype.tmpl = "tmpl/modalMap";
+    prototype.undelegateEvents = function(){
+      var ref$;
+      if ((ref$ = this.map) != null) {
+        if (typeof ref$.destroy === 'function') {
+          ref$.destroy();
+        }
+      }
+      return superclass.prototype.undelegateEvents.apply(this, arguments);
+    };
+    prototype.renderMap = function(next){
+      var this$ = this;
+      next == null && (next = function(){});
+      return require(["ymaps"], function(ymaps){
+        return ymaps.ready(function(){
+          return this$.map = new ymaps.Map("map", {
+            center: [56.826558, 60.594562],
+            zoom: 17
+          });
+        });
+      });
+    };
+    prototype.initialize = function(){
+      var this$ = this;
+      superclass.prototype.initialize.apply(this, arguments);
+      return this.on("rendered", function(){
+        return this$.renderMap(function(){});
+      });
+    };
+    function Map(){
+      Map.superclass.apply(this, arguments);
+    }
+    return Map;
+  }(ModalBase));
   return exports;
 });
 function extend$(sub, sup){

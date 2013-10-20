@@ -1,11 +1,11 @@
 var this$ = this, toString$ = {}.toString;
 define(function(require, exports, module){
-  var jquery, async, backbone, utils, marked, isNumber, API, Base, ModalBase, Meta, Main, Training, Sell, Map;
+  var jquery, async, backbone, utils, cache, isNumber, API, Base, ModalBase, Meta, Main, Training, Sell, Map, Articles;
   jquery = require('jquery');
   async = require('async');
   backbone = require('backbone');
   utils = require('app/utils');
-  marked = require('marked');
+  cache = require('app/cache');
   isNumber = function(n){
     return !isNaN(parseFloat(n)) && isFinite(n);
   };
@@ -83,6 +83,12 @@ define(function(require, exports, module){
       this.query = utils.qs.parse();
       ModalBase.superclass.apply(this, arguments);
     }
+    prototype.initialize = function(){
+      this.on("rendered", function(){
+        return window.top.scrollTo(0, 1);
+      });
+      return superclass.prototype.initialize.apply(this, arguments);
+    };
     prototype.render = function(){
       $(".window-bg, .window").show();
       if (this.query.next != null) {
@@ -167,7 +173,7 @@ define(function(require, exports, module){
     prototype.initialize = function(){
       var this$ = this;
       superclass.prototype.initialize.apply(this, arguments);
-      return this.on("rendered", function(){
+      return this.once("rendered", function(){
         return this$.renderMap(function(){});
       });
     };
@@ -175,6 +181,34 @@ define(function(require, exports, module){
       Map.superclass.apply(this, arguments);
     }
     return Map;
+  }(ModalBase));
+  exports.Articles = Articles = (function(superclass){
+    var prototype = extend$((import$(Articles, superclass).displayName = 'Articles', Articles), superclass).prototype, constructor = Articles;
+    prototype.tmpl = "tmpl/articles";
+    prototype.initialize = function(){
+      var this$ = this;
+      if (this.options.id == null) {
+        return this.fetchAll(function(){
+          return app.navigate("/articles/" + Object.keys(this$.menu.childs.articles.childs)[0] + "/", {
+            trigger: true
+          });
+        });
+      } else {
+        return superclass.prototype.initialize.apply(this, arguments);
+      }
+    };
+    prototype.fetchAll = function(next){
+      var this$ = this;
+      return cache.getPagesTree(function(err, tree){
+        this$.menu = tree;
+        this$.article = this$.menu.childs.articles.childs[this$.options.id];
+        return next();
+      });
+    };
+    function Articles(){
+      Articles.superclass.apply(this, arguments);
+    }
+    return Articles;
   }(ModalBase));
   return exports;
 });

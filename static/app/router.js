@@ -1,10 +1,11 @@
 var this$ = this;
 define(function(require, exports, module){
-  var API, backbone, views, collections, App;
+  var API, backbone, views, collections, cache, App;
   API = "/api/1";
   backbone = require('backbone');
   views = require('views');
   collections = require('collections');
+  cache = require('app/cache');
   return App = (function(superclass){
     var prototype = extend$((import$(App, superclass).displayName = 'App', App), superclass).prototype, constructor = App;
     prototype.routes = {
@@ -12,10 +13,11 @@ define(function(require, exports, module){
       "(#/)": "inspection",
       "(#/)training(/)": "training",
       "(#/)sell(/)": "sell",
-      "(#/)map(/)": "map"
+      "(#/)map(/)": "map",
+      "(#/)articles(/)": "articles",
+      "(#/)articles/:id(/)": "articles"
     };
     prototype.renderMap = function(route){
-      console.log("render map", route);
       if (route === 'main' || route === 'inspection') {
         $(".contact__address").attr("href", "/map/");
       } else {
@@ -65,7 +67,14 @@ define(function(require, exports, module){
         prevView: this.subView
       });
     };
-    prototype.cache = {};
+    prototype.articles = function(id){
+      console.log("articles", this.subView != null, this.view != null);
+      return this.subView = new views.Articles({
+        prevView: this.subView,
+        id: id
+      });
+    };
+    prototype.cache = cache;
     prototype.initialize = function(){
       var handler, this$ = this;
       this.meta = new views.Meta({

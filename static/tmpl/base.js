@@ -41,9 +41,9 @@
         __out.push('<!DOCTYPE HTML>\n<html lang="ru">\n<head>\n  <meta charset="utf-8">\n  <!-- Mimic Internet Explorer edge -->\n  <meta http-equiv="X-UA-Compatible" content="IE=edge">\n  <title>Diagem</title>\n  <meta name="description" content="">\n  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">\n  <meta name="format-detection" content="telephone=no">\n  <link rel="stylesheet" type="text/css" href="/static/css/style.min.css" media="all">\n  <link rel="stylesheet" type="text/css" href="/static/css/regular.css" media="all">\n  <!--[if lt IE 9]>\n  <link rel="stylesheet" type="text/css" media="all" href="/static/css/style_ie.min.css"/>\n  <![endif]-->\n  ');
       
         if (!!this.conf.debug) {
-          __out.push('\n  <script type="text/javascript" charset="utf-8">\n    window.DEBUG = ');
+          __out.push('\n    <script type="text/javascript" charset="utf-8">\n      window.DEBUG = ');
           __out.push(__sanitize(this.conf.debug));
-          __out.push(';\n  </script>\n  ');
+          __out.push(';\n    </script>\n  ');
         }
       
         __out.push('\n  <script data-main="/static/app/init" src="/static/libs/requirejs/require.js" type="text/javascript"></script>\n\n  <title>Диагем</title>\n  \n</head>\n<body>\n  <span id="-body" class="');
@@ -72,7 +72,7 @@
           __out.push('-show');
         }
       
-        __out.push('">\n    <a href="/" class="window-close">\n      <img src="/static/i/window_close.png" height="28" width="28" alt="" class="window-close__icon">\n    </a>\n    <span class="-modal-wrapper">');
+        __out.push('">\n    <a href="/" class="window-close">\n      <img src="/static/i/window_close.png" height="28" width="28" alt="" class="window-close__icon">\n    </a>\n    <div class="content__menu-bg content__menu-bg_window"></div>\n    <img src="/static/i/menu_shadow.png" height="765" width="10" alt="" class="content__menu-shadow">\n\n    <span class="-modal-wrapper">');
       
         __out.push(this.modal);
       

@@ -38,7 +38,7 @@
     }
     (function() {
       (function() {
-        __out.push('\n<div class="content__menu">\n  <h2 class="window-menu__title-sub">Контакты:</h2>\n    <p class="menu-desc">описание</p>\n</div>\n<div class="content__body">\n  <div class="-map-wrapper" id="map"></div>\n  <!-- map -->\n</div>\n');
+        __out.push('<div class="present">\n  <!-- TODO: remove br --><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>\n</div>');
       
       }).call(this);
       

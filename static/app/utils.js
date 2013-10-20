@@ -1,5 +1,13 @@
 var toString$ = {}.toString;
-define(function(require, exports, module){
+({
+  define: typeof define !== "undefined"
+    ? define
+    : function(deps, factory){
+      return module.exports = factory();
+    }
+}).define([], function(){
+  var exports, tree;
+  exports = {};
   exports.isNumber = function(n){
     return !isNaN(parseFloat(n)) && isFinite(n);
   };
@@ -98,6 +106,38 @@ define(function(require, exports, module){
       }
     }
   };
-  window.utils = exports;
+  exports.tree = tree = function(list){
+    var top$, i$, len$, i, loop$;
+    top$ = top$ || {
+      childs: {}
+    };
+    for (i$ = 0, len$ = list.length; i$ < len$; ++i$) {
+      i = list[i$];
+      if (i.parentId == null) {
+        top$.childs[i._id] = (i.childs = {}, i);
+      }
+    }
+    loop$ = function(top){
+      var k, ref$, v, lresult$, i$, ref1$, len$, m, results$ = [];
+      for (k in ref$ = top.childs) {
+        v = ref$[k];
+        lresult$ = [];
+        for (i$ = 0, len$ = (ref1$ = list).length; i$ < len$; ++i$) {
+          m = ref1$[i$];
+          if (m.parentId === k) {
+            v.childs[m._id] = (m.childs = {}, m);
+            lresult$.push(loop$(m));
+          }
+        }
+        results$.push(lresult$);
+      }
+      return results$;
+    };
+    loop$(top$);
+    return top$;
+  };
+  try {
+    window.utils = exports;
+  } catch (e$) {}
   return exports;
 });

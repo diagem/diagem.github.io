@@ -38,7 +38,19 @@
     }
     (function() {
       (function() {
-        __out.push('\n<div class="content__menu">\n  <h2 class="window-menu__title-sub">Контакты:</h2>\n    <p class="menu-desc">описание</p>\n</div>\n<div class="content__body">\n  <div class="-map-wrapper" id="map"></div>\n  <!-- map -->\n</div>\n');
+        var i, _i, _len, _ref;
+      
+        __out.push('<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title></title>\n  ');
+      
+        _ref = this.scripts;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          i = _ref[_i];
+          __out.push('\n    <script src="');
+          __out.push(__sanitize(i));
+          __out.push('" type="text/json"></script>\n  ');
+        }
+      
+        __out.push('\n</head>\n<body>\n  \n</body>\n</html>');
       
       }).call(this);
       

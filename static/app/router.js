@@ -22,10 +22,12 @@ define(function(require, exports, module){
       "(#/)references/:id(/)": "references"
     };
     prototype.renderMap = function(route){
+      var link;
+      link = location.href.split("/").slice(3).join("/");
       if (route === 'main' || route === 'inspection') {
         $(".contact__address").attr("href", "/map/");
       } else {
-        $(".contact__address").attr("href", "/map/?next=/" + route);
+        $(".contact__address").attr("href", "/map/?next=/" + link);
       }
     };
     prototype.showWindow = function(){

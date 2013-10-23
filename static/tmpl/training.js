@@ -38,7 +38,80 @@
     }
     (function() {
       (function() {
-        __out.push('  <div class="content">\n    <a href="/" class="present-slider_arrow present-slider_arrow-prev"></a>\n    <a href="/sell/" class="present-slider_arrow present-slider_arrow-next"></a>\n    <div class="content__inner">\n      <div class="content__menu-bg"></div>\n      <img src="/static/i/menu_shadow.png" height="765" width="10" alt="" class="content__menu-shadow">\n      <div class="content__menu">\n        <ul class="menu">\n          <li class="menu__list">\n            <a href="#" class="btn-uni__link btn-uni__link_light-blue btn-uni__menu_light-blue">\n              <div class="btn-uni__link-body">\n                <img src="/static/i/btn-uni__blue-light_angle_left_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n                <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n                <span class="btn-uni__link-text btn-uni__link-text_light-blue">Индивидуальное</span>\n                <img src="/static/i/btn-uni__blue-light_angle_right_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n                <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n              </div>\n            </a>\n          </li>\n          <li class="menu__list">\n            <a href="#" class="btn-uni__link btn-uni__link_light-blue btn-uni__menu_light-blue">\n              <div class="btn-uni__link-body">\n                <img src="/static/i/btn-uni__blue-light_angle_left_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n                <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n                <span class="btn-uni__link-text btn-uni__link-text_light-blue">Корпоративное</span>\n                <img src="/static/i/btn-uni__blue-light_angle_right_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n                <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n              </div>\n            </a>\n          </li>\n          <li class="menu__list">\n            <a href="#" class="btn-uni__link btn-uni__link_light-blue btn-uni__menu_light-blue btn-uni__link_active">\n              <div class="btn-uni__link-body">\n                <img src="/static/i/btn-uni__blue-light_angle_left_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n                <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n                <span class="btn-uni__link-text btn-uni__link-text_light-blue">Тренинг-семинары</span>\n                <img src="/static/i/btn-uni__blue-light_angle_right_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n                <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n              </div>\n            </a>\n          </li>\n          <li class="menu__list">\n            <a href="#" class="btn-uni__link btn-uni__link_light-blue btn-uni__menu_light-blue">\n              <div class="btn-uni__link-body">\n                <img src="/static/i/btn-uni__blue-light_angle_left_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n                <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n                <span class="btn-uni__link-text btn-uni__link-text_light-blue">Информационное<br> консультирование</span>\n                <img src="/static/i/btn-uni__blue-light_angle_right_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n                <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n              </div>\n            </a>\n          </li>\n        </ul>\n        <p class="menu-desc">Для менеджеров по закупке ювелирных камней, сортировщи- ков, оценщиков, при- емщиков ювелирных изделий в комиссион- ных магазинах и лом- бардах.</p>\n      </div>\n      <div class="content__body">\n        <div class="main-content">\n          <div class="main-content__inner">\n            <h1>Тренинг-семинары по программе «Драгоценные металлы <br> и драгоценные камни»:</h1>\n            <ul>\n              <li>драгоценные металлы и сплавы драгоценных металлов: состав, свойства, особенности применения; понятие «ювелирные изделия»; законодательная и нормативная документация в области ювелирных изделий из ДМ и ДК;</li>\n              <li>правила торговли ювелирными изделиями из ДМ и ДК, клеймение ювелирных изделий: понятия «пробирное клеймо», «именник», состав клейма и состав именника, правила клеймения, установленные в РФ пробы сплавов драгоценных металлов;</li>\n              <li>драгоценные, ювелирные, поделочные камни, классификация, номенклатура, законодательные и нормативные документы по ДК;</li>\n              <li>бриллианты, свойства, обработка, синтетические алмазы и другие имитации; методы облагораживания; сортировка по ТУ 117-4.2099-2002;</li>\n              <li>оценка бриллиантов по системе GIA; соотношение российской и зарубежных систем оценки бриллиантов;</li>\n              <li>изумруды; состав, другие разновидности минералов группы берилла; свойства; синтетические аналоги; облагораживание; регионы добычи и переработки изумрудов; сортировка изумрудов по ТУ 95 335 – 88;</li>\n              <li>рубины и сапфиры; цветные сапфиры; свойства; регионы добычи и переработки; синтетические аналоги; облагораживание; принятая в РФ система сортировки рубинов и сапфиров;</li>\n              <li>популярные ювелирные камни: топаз, хризолит, гранаты, аметист, цитрин, аметрин; свойства; облагораживание; регионы добычи; способы обработки; особенности продаж;</li>\n              <li>жемчуг; условия образования; классификация; свойства; регионы добычи; качественные характеристики.</li>\n            </ul>\n            <ul class="content-more-info">\n              <li class="content-more-info__list">\n                <i class="content-more-info__icon content-more-info__icon_book"></i>\n                Выдается <br> методическое <br> пособие\n              </li>\n              <li class="content-more-info__list">\n                <i class="content-more-info__icon content-more-info__icon_time"></i>\n                Продолжительность: <b>30ч</b>\n              </li>\n              <li class="content-more-info__list">\n                <i class="content-more-info__icon content-more-info__icon_count"></i>\n                Слушатели: <b>2</b>\n              </li>\n            </ul>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>');
+        var article, k, renderItem, v, value, _i, _len, _ref;
+      
+        __out.push('  <div class="content">\n    <a href="/" class="present-slider_arrow present-slider_arrow-prev"></a>\n    <a href="/sell/" class="present-slider_arrow present-slider_arrow-next"></a>\n    <div class="content__inner">\n      <div class="content__menu-bg"></div>\n      <img src="/static/i/menu_shadow.png" height="765" width="10" alt="" class="content__menu-shadow">\n      <div class="content__menu">\n        <ul class="menu">\n          ');
+      
+        article = this.article;
+      
+        __out.push('\n          ');
+      
+        renderItem = function(item, prevLink, indention) {
+          return __capture(function() {
+            var k, v, value, _i, _len, _ref;
+            __out.push('\n            <li class="menu__list ');
+            __out.push(indention);
+            __out.push('">\n              <a href="');
+            __out.push(__sanitize(prevLink + "/" + item._id));
+            __out.push('/" class="btn-uni__link btn-uni__link_light-blue btn-uni__menu_light-blue ');
+            if (item._id === article._id) {
+              __out.push('btn-uni__link_active');
+            }
+            __out.push('">\n                <div class="btn-uni__link-body">\n                  <img src="/static/i/btn-uni__blue-light_angle_left_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-left">\n                  <img src="/static/i/btn-uni__blue-light_angle_left_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-left btn-uni__link-angle-left_active">\n                  <span class="btn-uni__link-text btn-uni__link-text_light-blue">');
+            __out.push(item.title);
+            __out.push('</span>\n                  <img src="/static/i/btn-uni__blue-light_angle_right_transp.png" height="40" width="9" alt="" class="btn-uni__link-angle-right">\n                  <img src="/static/i/btn-uni__blue-light_angle_right_active.png" height="40" width="9" alt="" class="btn-uni__link-angle-right btn-uni__link-angle-right_active">\n                </div>\n              </a>\n            </li>\n            ');
+            _ref = ((function() {
+              var _ref, _results;
+              _ref = item.childs;
+              _results = [];
+              for (k in _ref) {
+                v = _ref[k];
+                _results.push(v);
+              }
+              return _results;
+            })()).sort(function(a, b) {
+              return a.index - b.index;
+            });
+            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+              value = _ref[_i];
+              __out.push('\n              ');
+              __out.push(renderItem(value, prevLink + "/" + item._id, indention || "menu__list_indent"));
+              __out.push('\n            ');
+            }
+            return __out.push('\n          ');
+          });
+        };
+      
+        __out.push('\n\n          ');
+      
+        _ref = ((function() {
+          var _ref, _results;
+          _ref = this.menu.childs.training.childs;
+          _results = [];
+          for (k in _ref) {
+            v = _ref[k];
+            _results.push(v);
+          }
+          return _results;
+        }).call(this)).sort(function(a, b) {
+          return a.index - b.index;
+        });
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          value = _ref[_i];
+          __out.push('\n            ');
+          __out.push(renderItem(value, "/training"));
+          __out.push('\n          ');
+        }
+      
+        __out.push('\n          \n        </ul>\n        <p class="menu-desc">');
+      
+        __out.push(this.article.teaser);
+      
+        __out.push('</p>\n      </div>\n      <div class="content__body">\n        <div class="main-content">\n          <div class="main-content__inner">\n            ');
+      
+        __out.push(this.article.text);
+      
+        __out.push('\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n');
       
       }).call(this);
       

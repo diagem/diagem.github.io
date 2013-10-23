@@ -107,34 +107,25 @@ var toString$ = {}.toString;
     }
   };
   exports.tree = tree = function(list){
-    var top$, i$, len$, i, loop$;
-    top$ = top$ || {
-      childs: {}
+    var result, loop$;
+    result = {
+      _id: void 8,
+      childs: {},
+      level: 1
     };
-    for (i$ = 0, len$ = list.length; i$ < len$; ++i$) {
-      i = list[i$];
-      if (i.parentId == null) {
-        top$.childs[i._id] = (i.childs = {}, i);
-      }
-    }
     loop$ = function(top){
-      var k, ref$, v, lresult$, i$, ref1$, len$, m, results$ = [];
-      for (k in ref$ = top.childs) {
-        v = ref$[k];
-        lresult$ = [];
-        for (i$ = 0, len$ = (ref1$ = list).length; i$ < len$; ++i$) {
-          m = ref1$[i$];
-          if (m.parentId === k) {
-            v.childs[m._id] = (m.childs = {}, m);
-            lresult$.push(loop$(m));
-          }
+      var i$, ref$, len$, m, results$ = [];
+      for (i$ = 0, len$ = (ref$ = list).length; i$ < len$; ++i$) {
+        m = ref$[i$];
+        if (m.parentId === top._id) {
+          top.childs[m._id] = (m.childs = {}, m.level = top.level + 1, m);
+          results$.push(loop$(m));
         }
-        results$.push(lresult$);
       }
       return results$;
     };
-    loop$(top$);
-    return top$;
+    loop$(result);
+    return result;
   };
   try {
     window.utils = exports;

@@ -56,11 +56,11 @@
       
         __out.push(this.header);
       
-        __out.push('\n    <span id="-view">');
+        __out.push('\n    <div id="-view">');
       
         __out.push(this.page);
       
-        __out.push('</span>\n    <div class="footer">\n      <div class="footer__inner">\n        <div class="footer-logo">\n          <img src="/static/i/logo_small.png" height="25" width="22" alt="" class="footer-logo__pic">\n          <span class="footer-logo__text">Диагем — независимая экспертиза, оценка драгоценных, ювелирных и других камней, бриллиантов и изделий из драгоценных металлов.</span>\n        </div><div class="footer-contact">\n          <a href="tel:+7 (343) 257-35-68" class="footer-contact__phone">+7 (343) 257-35-68</a>\n          <div class="footer-contact__address">Росссия, Екатеринбург, Хохрякова, 74</div>\n        </div><div class="footer-link">\n          <a href="/" class="footer-copy">&copy; ООО «Диагем»</a><br>\n          <a href="http://doitgroup.ru/" target="_blank" class="footer-made-in">made in <img src="/static/i/doit_logo.png" height="15" width="13" alt=""></a>\n        </div>\n      </div>\n    </div>\n\n  </span>\n\n  <div class="window-bg ');
+        __out.push('</div>\n    <div class="footer">\n      <div class="footer__inner">\n        <div class="footer-logo">\n          <img src="/static/i/logo_small.png" height="25" width="22" alt="" class="footer-logo__pic">\n          <span class="footer-logo__text">Диагем — независимая экспертиза, оценка драгоценных, ювелирных и других камней, бриллиантов и изделий из драгоценных металлов.</span>\n        </div><div class="footer-contact">\n          <a href="tel:+7 (343) 257-35-68" class="footer-contact__phone">+7 (343) 257-35-68</a>\n          <div class="footer-contact__address">Росссия, Екатеринбург, Хохрякова, 74</div>\n        </div><div class="footer-link">\n          <a href="/" class="footer-copy">&copy; ООО «Диагем»</a><br>\n          <a href="http://doitgroup.ru/" target="_blank" class="footer-made-in">made in <img src="/static/i/doit_logo.png" height="15" width="13" alt=""></a>\n        </div>\n      </div>\n    </div>\n\n  </span>\n\n  <div class="window-bg ');
       
         if (this.modal != null) {
           __out.push('-show');

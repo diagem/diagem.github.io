@@ -12,10 +12,14 @@ define(function(require, exports, module){
       "": "inspection",
       "(#/)": "inspection",
       "(#/)training(/)": "training",
+      "(#/)training/:id(/)": "training",
+      "(#/)training/:id/:idTwo(/)": "training",
       "(#/)sell(/)": "sell",
       "(#/)map(/)": "map",
       "(#/)articles(/)": "articles",
-      "(#/)articles/:id(/)": "articles"
+      "(#/)articles/:id(/)": "articles",
+      "(#/)references(/)": "references",
+      "(#/)references/:id(/)": "references"
     };
     prototype.renderMap = function(route){
       if (route === 'main' || route === 'inspection') {
@@ -49,9 +53,11 @@ define(function(require, exports, module){
         });
       }
     };
-    prototype.training = function(){
+    prototype.training = function(id, idTwo){
       this.hideWindow(1);
       return this.view = new views.Training({
+        id: id,
+        idTwo: idTwo,
         prevView: this.view
       });
     };
@@ -68,15 +74,20 @@ define(function(require, exports, module){
       });
     };
     prototype.articles = function(id){
-      console.log("articles", this.subView != null, this.view != null);
       return this.subView = new views.Articles({
+        prevView: this.subView,
+        id: id
+      });
+    };
+    prototype.references = function(id){
+      return this.subView = new views.References({
         prevView: this.subView,
         id: id
       });
     };
     prototype.cache = cache;
     prototype.initialize = function(){
-      var handler, this$ = this;
+      var handler, $win, $page, this$ = this;
       this.meta = new views.Meta({
         el: $("body")
       });
@@ -111,7 +122,13 @@ define(function(require, exports, module){
           return false;
         }
       };
-      return $(document).on("click touchend", "a", handler);
+      $(document).on("click touchend", "a", handler);
+      $win = $(window);
+      $page = $('#-view');
+      $win.resize(function(){
+        return $page.css("min-height", $win.height() - 146);
+      });
+      return $win.trigger("resize");
     };
     function App(){
       App.superclass.apply(this, arguments);

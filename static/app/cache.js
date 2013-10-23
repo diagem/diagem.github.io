@@ -8,7 +8,7 @@ define(function(require){
     prototype.getPagesTree = function(next){
       var this$ = this;
       if (c.tree != null) {
-        next(null, c.tree);
+        return next(null, c.tree);
       }
       return require(['jquery', 'app/utils'], function($, utils){
         return $.getJSON("/api/pages.json", function(resp){

@@ -1,6 +1,6 @@
 var this$ = this, toString$ = {}.toString;
 define(function(require, exports, module){
-  var jquery, async, backbone, utils, cache, isNumber, API, Base, ModalBase, Meta, Main, Training, Sell, Map, Articles;
+  var jquery, async, backbone, utils, cache, isNumber, API, Base, ModalBase, Meta, Main, Training, Sell, Map, Articles, References;
   jquery = require('jquery');
   async = require('async');
   backbone = require('backbone');
@@ -133,6 +133,33 @@ define(function(require, exports, module){
   exports.Training = Training = (function(superclass){
     var prototype = extend$((import$(Training, superclass).displayName = 'Training', Training), superclass).prototype, constructor = Training;
     prototype.tmpl = "tmpl/training";
+    prototype.initialize = function(){
+      var this$ = this;
+      return this.fetchAll(function(){
+        if (this$.options.id == null) {
+          return app.navigate("/training/individual/", {
+            trigger: true
+          });
+        } else {
+          if (this$.options.id === "individual" && this$.options.idTwo == null) {
+            return app.navigate("/training/individual/jewellery-stone-diagnostics/", {
+              trigger: true
+            });
+          } else {
+            return superclass.prototype.initialize.apply(this$, arguments);
+          }
+        }
+      });
+    };
+    prototype.fetchAll = function(next){
+      var this$ = this;
+      return cache.getPagesTree(function(err, tree){
+        var ref$;
+        this$.menu = tree;
+        this$.article = ((ref$ = this$.menu.childs.training.childs[this$.options.id]) != null ? ref$.childs[this$.options.idTwo] : void 8) || this$.menu.childs.training.childs[this$.options.id];
+        return next();
+      });
+    };
     function Training(){
       Training.superclass.apply(this, arguments);
     }
@@ -209,6 +236,34 @@ define(function(require, exports, module){
       Articles.superclass.apply(this, arguments);
     }
     return Articles;
+  }(ModalBase));
+  exports.References = References = (function(superclass){
+    var prototype = extend$((import$(References, superclass).displayName = 'References', References), superclass).prototype, constructor = References;
+    prototype.tmpl = "tmpl/articles";
+    prototype.initialize = function(){
+      var this$ = this;
+      if (this.options.id == null) {
+        return this.fetchAll(function(){
+          return app.navigate("/references/" + Object.keys(this$.menu.childs.references.childs)[0] + "/", {
+            trigger: true
+          });
+        });
+      } else {
+        return superclass.prototype.initialize.apply(this, arguments);
+      }
+    };
+    prototype.fetchAll = function(next){
+      var this$ = this;
+      return cache.getPagesTree(function(err, tree){
+        this$.menu = tree;
+        this$.article = this$.menu.childs.references.childs[this$.options.id];
+        return next();
+      });
+    };
+    function References(){
+      References.superclass.apply(this, arguments);
+    }
+    return References;
   }(ModalBase));
   return exports;
 });

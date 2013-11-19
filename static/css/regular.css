@@ -22,7 +22,12 @@
   right: 10px;
   bottom: 10px;
 }
-
+.menu-desc.-contacts {
+  text-align: left;
+  margin-left: 30px;
+  width: 208px;
+  float: none;
+}
 .present-section-1 {
   display: inline-block;
 }

@@ -6,7 +6,7 @@ var toString$ = {}.toString;
       return module.exports = factory();
     }
 }).define([], function(){
-  var exports, tree;
+  var exports, tree, escapeHTML;
   exports = {};
   exports.isNumber = function(n){
     return !isNaN(parseFloat(n)) && isFinite(n);
@@ -125,6 +125,59 @@ var toString$ = {}.toString;
       return results$;
     };
     loop$(result);
+    return result;
+  };
+  escapeHTML = function(text){
+    return $("<div/>").text(text).html();
+  };
+  exports.linkify_entities = function(tweet){
+    var index_map, result, last_i, i, ind, end, func;
+    if (!tweet.entities) {
+      return escapeHTML(tweet.text);
+    }
+    index_map = {};
+    $.each(tweet.entities.urls, function(i, entry){
+      return index_map[entry.indices[0]] = [
+        entry.indices[1], function(text){
+          return "<a target='_blank' href='" + escapeHTML(entry.url) + "'>" + escapeHTML(text) + "</a>";
+        }
+      ];
+    });
+    $.each(tweet.entities.hashtags, function(i, entry){
+      return index_map[entry.indices[0]] = [
+        entry.indices[1], function(text){
+          return "<a target='_blank' href='http://twitter.com/search?q=" + escape("#" + entry.text) + "'>" + escapeHTML(text) + "</a>";
+        }
+      ];
+    });
+    $.each(tweet.entities.user_mentions, function(i, entry){
+      return index_map[entry.indices[0]] = [
+        entry.indices[1], function(text){
+          return "<a target='_blank' title='" + escapeHTML(entry.name) + "' href='http://twitter.com/" + escapeHTML(entry.screen_name) + "'>" + escapeHTML(text) + "</a>";
+        }
+      ];
+    });
+    result = "";
+    last_i = 0;
+    i = 0;
+    i = 0;
+    while (i < tweet.text.length) {
+      ind = index_map[i];
+      if (ind) {
+        end = ind[0];
+        func = ind[1];
+        if (i > last_i) {
+          result += escapeHTML(tweet.text.substring(last_i, i));
+        }
+        result += func(tweet.text.substring(i, end));
+        i = end - 1;
+        last_i = end;
+      }
+      ++i;
+    }
+    if (i > last_i) {
+      result += escapeHTML(tweet.text.substring(last_i, i));
+    }
     return result;
   };
   try {

@@ -20,7 +20,6 @@ ie = function(){
   } else {}
 }();
 require.config({
-  urlArgs: window.DEBUG ? "v=" + Date.now() : null,
   paths: {
     "backbone": "/static/libs/backbone/backbone-min",
     "underscore": "/static/libs/underscore/underscore-min",
@@ -35,7 +34,8 @@ require.config({
     "tmpl": "/static/tmpl",
     "sockjs": "/static/libs/sockjs/sockjs.min",
     "marked": "/static/libs/marked/lib/marked",
-    "ymaps": "http://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU"
+    "ymaps": "http://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU",
+    "tweets": "http://tw-proxy.herokuapp.com/1.1/statuses/user_timeline.json?screen_name=olebedev&count=1&callback=define"
   },
   shim: {
     moment: {

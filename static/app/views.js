@@ -125,6 +125,30 @@ define(function(require, exports, module){
   exports.Main = Main = (function(superclass){
     var prototype = extend$((import$(Main, superclass).displayName = 'Main', Main), superclass).prototype, constructor = Main;
     prototype.tmpl = "tmpl/main";
+    prototype.initialize = function(){
+      var this$ = this;
+      superclass.prototype.initialize.apply(this, arguments);
+      return this.on('rendered', function(){
+        return function(cbk){
+          var username;
+          if (app["-tweet-"] != null) {
+            return cbk(app["-tweet-"]);
+          }
+          username = 'diagem96';
+          require(["http://tw-proxy.herokuapp.com/1.1/statuses/user_timeline.json?screen_name=" + username + "&count=1&callback=tweets"]);
+          return window.tweets = function(data){
+            var item;
+            item = data.pop();
+            app["-tweet-"] = utils.linkify_entities(item || {
+              text: "Пока твитов нет =)"
+            });
+            return cbk(app["-tweet-"]);
+          };
+        }(function(tweet){
+          return this$.$(".form-twitter__context").html(tweet);
+        });
+      });
+    };
     function Main(){
       Main.superclass.apply(this, arguments);
     }
@@ -190,10 +214,16 @@ define(function(require, exports, module){
       next == null && (next = function(){});
       return require(["ymaps"], function(ymaps){
         return ymaps.ready(function(){
-          return this$.map = new ymaps.Map("map", {
+          var placemark;
+          this$.map = new ymaps.Map("map", {
             center: [56.826558, 60.594562],
             zoom: 17
           });
+          window.placemark = placemark = new ymaps.Placemark([56.826558, 60.594562], {
+            balloonContent: "<p>\n  5 этаж бизнес-центра «Кристалл»<br>\n  Работаем: по будням <br>\n  с 10:00 до 18:00<br>\n  <br>\n  Тел.: +7 (343) 257-35-68<br>\n  Почта: <a href=\"mailto:diagem@mail.ru?subject=Письмо с сайта\">diagem@mail.ru</a><br>\n</p>",
+            balloonContentHeader: "ООО \"Диагем\""
+          });
+          return this$.map.geoObjects.add(placemark);
         });
       });
     };

@@ -38,7 +38,7 @@
     }
     (function() {
       (function() {
-        __out.push('\n<div class="content__menu">\n  <h2 class="window-menu__title-sub">Контакты:</h2>\n    <p class="menu-desc">описание</p>\n</div>\n<div class="content__body">\n  <div class="-map-wrapper" id="map"></div>\n  <!-- map -->\n</div>\n');
+        __out.push('\n<div class="content__menu">\n  <h2 class="window-menu__title-sub">Контакты:</h2>\n  <p class="menu-desc -contacts">\n    620014, Екатеринбург<br>\n    ул. Хохрякова, 74<br>\n    <br>\n    5 этаж бизнес-центра «Кристалл»<br>\n    Работаем: по будням <br>\n    с 10:00 до 18:00<br>\n    <br>\n    Тел.: +7 (343) 257-35-68<br>\n    Почта: <a href="mailto:diagem@mail.ru?subject=Письмо с сайта">diagem@mail.ru</a><br>\n    \n  </p>\n</div>\n<div class="content__body">\n  <div class="-map-wrapper" id="map"></div>\n  <!-- map -->\n</div>\n');
       
       }).call(this);
       

@@ -136,17 +136,24 @@ var toString$ = {}.toString;
       return escapeHTML(tweet.text);
     }
     index_map = {};
-    $.each(tweet.entities.urls, function(i, entry){
+    $.each(tweet.entities.hashtags, function(i, entry){
+      return index_map[entry.indices[0]] = [
+        entry.indices[1], function(text){
+          return "<a target='_blank' href='http://twitter.com/search?q=" + escape("#" + entry.text) + "'>" + escapeHTML(text) + "</a>";
+        }
+      ];
+    });
+    $.each(tweet.entities.media, function(i, entry){
       return index_map[entry.indices[0]] = [
         entry.indices[1], function(text){
           return "<a target='_blank' href='" + escapeHTML(entry.url) + "'>" + escapeHTML(text) + "</a>";
         }
       ];
     });
-    $.each(tweet.entities.hashtags, function(i, entry){
+    $.each(tweet.entities.urls, function(i, entry){
       return index_map[entry.indices[0]] = [
         entry.indices[1], function(text){
-          return "<a target='_blank' href='http://twitter.com/search?q=" + escape("#" + entry.text) + "'>" + escapeHTML(text) + "</a>";
+          return "<a target='_blank' href='" + escapeHTML(entry.url) + "'>" + escapeHTML(text) + "</a>";
         }
       ];
     });

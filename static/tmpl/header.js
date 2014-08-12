@@ -68,7 +68,7 @@
           __out.push('">\n            <img src="/static/i/nav_angle_left_inverse_active.png" height="40" width="9" alt="" class="nav__angle-left_active">\n            <div class="nav__content">\n              <span class="nav__text">Каталог</span>\n            </div>\n            <img src="/static/i/nav_angle_right.png" height="40" width="9" alt="" class="nav__angle-right">\n            <img src="/static/i/nav_angle_right_active.png" height="40" width="9" alt="" class="nav__angle-right_active">\n          </a>\n        ');
         }
       
-        __out.push(' \n      </li>\n    </ul>\n    <a target="_blank" href="https://www.facebook.com/profile.php?id=100005572535169" class="nav-more-link">\n      <span class="nav-more-link__text">Блог</span>\n    </a>\n    <div class="contact">\n      <a href="tel:+7 (343) 257-35-68" class="contact__phone">+7 (343) 257-35-68</a>\n      <a href="/map/" class="contact__address"></a>\n    </div>\n  </div>\n</div>\n');
+        __out.push(' \n      </li>\n    </ul>\n    <a target="_blank" href="https://www.facebook.com/profile.php?id=100005572535169" class="nav-more-link">\n      <span class="nav-more-link__text">&nbsp;</span>\n    </a>\n    <div class="contact">\n      <a href="tel:+7 (343) 257-35-68" class="contact__phone">+7 (343) 257-35-68</a>\n      <a href="/map/" class="contact__address"></a>\n    </div>\n  </div>\n</div>\n');
       
       }).call(this);
       
